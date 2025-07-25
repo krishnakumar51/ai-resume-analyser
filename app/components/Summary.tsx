@@ -29,7 +29,7 @@ const Summary = ({feedback}:{feedback: Feedback}) => {
 
                 <div className="flex flex-col gap-2">
                     <h2 className="text-2xl font-bold"> Resume Score</h2>
-                    <p className="text-sm text-gray-500">This score is calculated based on the variables listed below.</p>
+                    <p className="text-sm text-gray-500">This score is been calculated based on the variables listed below with respect to the job description job role.</p>
                 </div>
             </div>
 
