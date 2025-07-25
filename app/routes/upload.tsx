@@ -59,8 +59,7 @@ const Upload = () => {
         setStatusText("Analysis completed, redirecting...")
         console.log(data);
 
-
-
+        navigate(`/resume/${uuid}`);
 
     }
 
@@ -86,7 +85,7 @@ const Upload = () => {
 
 
     return (
-        <main className="bg-[url('images/bg-main.svg')] bg-cover">
+        <main className="bg-[url('/images/bg-main.svg')] bg-cover">
             <NavBar/>
             <section className="main-section">
                 <div className="page-heading py-16">
