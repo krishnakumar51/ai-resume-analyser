@@ -1,18 +1,27 @@
-# Welcome to React Router!
-
-A modern, production-ready template for building full-stack React applications using React Router.
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## AI Resume Analyser
+AI Resume Analyser is a modern, AI-powered web application that delivers tailored resume analysis and optimization. Designed with React Router 7, Vite, and a novel backend approach using Puter.js, it offers users deep insights with resume scoring, tailored descriptions, summarized feedback, and actionable recommendations for specified job descriptions.
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- AI Resume Scoring: Provides ATS-style matching, customized feedback, and role-specific resume scores.
+
+- Smart Reports: Generates dynamic summaries and recommendations based on user-uploaded resumes and job descriptions.
+
+- Server-Side Rendering (SSR) Toggle: SSR is supported but can be disabled for deployment flexibility.
+
+- Modern Tech Stack:
+
+   - React Router 7 for navigation
+
+   - Vite for optimized builds and development experience
+
+    - Tailwind CSS for utility-first styling
+
+     - Backend managed with Puter.js for next-gen, serverless AI features
+
+- Seamlessly Responsive: Works across all devices with a clean, modern UI.
+
+- Easy Integration: Works with GitHub, Vercel, and Puter for rapid deployment
 
 ## Getting Started
 
@@ -21,12 +30,14 @@ A modern, production-ready template for building full-stack React applications u
 Install the dependencies:
 
 ```bash
+git clone https://github.com/krishnakumar51/ai-resume-analyser.git
+cd ai-resume-analyser
 npm install
 ```
 
 ### Development
 
-Start the development server with HMR:
+Start the development:
 
 ```bash
 npm run dev
@@ -43,7 +54,41 @@ npm run build
 ```
 
 ## Deployment
+### Deploy to Puter:
+1. Turn off SSR before building:
+   - Open react-router.config.ts
+   - Set ssr to false:
+   ```bash
+   export default {
+    ssr: false,
+    }
+   ```
+   - Save and close the config file.
 
+
+2. Build the app.
+   ```bash
+   npm run build
+   ```
+3. Copy all contents from the build/ directory.
+4. Deploy to Puter:
+   - Go to the Apps section in your Puter app gallery.
+   - Create a new app and upload all files from the build/ directory.
+   - Follow any additional prompts for static site deployment.
+
+
+### Deploying on Vercel
+1. Sign in to Vercel.
+2. Import the project repository:
+   - Click “New Project” and select your GitHub repo.
+   - Select “Vite” as the project framework when prompted.
+3. Configure settings:
+   - Root directory: Use the root or appropriate folder if in a monorepo.
+4. Deploy:
+   - Click “Deploy.”
+   -  Vercel will automatically detect the build command (npm run build) and output directory (build/ or as specified).
+   - Wait for the deployment to complete.
+   -  Visit your new Vercel site via the link provided after deployment.
 ### Docker Deployment
 
 To build and run using Docker:
@@ -60,28 +105,4 @@ The containerized application can be deployed to any platform that supports Dock
 - AWS ECS
 - Google Cloud Run
 - Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
 
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
